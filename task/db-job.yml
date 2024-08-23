@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: db-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: db-job
+        image: mysql:latest
+        command: ["sh", "-c"]
+        args: ["mysqladmin -u root -h localhost -P 8000 -protocol=tcp -p "1234" create mydatabase && mysqladmin -u root -h localhost -P 8000 -protocol=tcp -p "1234" mydatabase < create_table.sql"] 
