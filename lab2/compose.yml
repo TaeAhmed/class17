@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - nginx-Root-Document:/usr/share/nginx/html
+    ports:
+      - 9000:80  
+    container_name: my-nginx
+volumes:
+  nginx-Root-Document:   
