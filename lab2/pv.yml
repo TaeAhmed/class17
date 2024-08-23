@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /home/tae/class17/lab2/pv0001/
+    path: /tmp/pv0001
   storageClassName: ""
   claimRef:
     namespace: default
