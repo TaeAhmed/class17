@@ -21,11 +21,13 @@ spec:
         - name: nginx-pv
           mountPath: /etc/nginx
           subPath: nginx
-        - name: nginx-pv
+        - name: nginx-config
           mountPath: /usr/share/nginx/html
-          subPath: html
 
       volumes:
       - name: nginx-pv
         persistentVolumeClaim:
           claimName: nginx-pvc
+      - name: nginx-config
+        configMap:
+          name: nginx-config

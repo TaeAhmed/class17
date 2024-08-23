@@ -3,4 +3,13 @@ kind: ConfigMap
 metadata:
   name: nginx-config
 data:
-  index.html: "<center> Hello Tae </center>"
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Hello from ConfigMap!</title>
+    </head>
+    <body>
+      <h1>Hello Tae!</h1>
+    </body>
+    </html>
